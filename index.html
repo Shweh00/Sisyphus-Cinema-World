@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sisyphus' Cinema World V1</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main id="shell" aria-label="Sisyphus' Cinema World game">
+      <canvas id="game" width="360" height="640"></canvas>
+      <div id="death-menu" class="overlay hidden" aria-hidden="true">
+        <button data-action="retry">重来</button>
+        <button data-action="lonely">不要它</button>
+      </div>
+      <div id="confirm-menu" class="overlay hidden" aria-hidden="true">
+        <div class="confirm-text">确定吗？</div>
+        <div class="confirm-actions">
+          <button data-action="cancel">取消</button>
+          <button data-action="confirm">确定</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

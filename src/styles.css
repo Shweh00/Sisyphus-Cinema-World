@@ -1,0 +1,73 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #d8d2c0;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  touch-action: none;
+  user-select: none;
+}
+
+#shell {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #000;
+}
+
+#game {
+  width: min(100vw, calc(100vh * 9 / 16), 460px);
+  height: min(100vh, calc(100vw * 16 / 9), 818px);
+  image-rendering: pixelated;
+  background: #050506;
+  box-shadow: 0 0 0 1px rgba(216, 210, 192, 0.04), 0 0 42px rgba(0, 0, 0, 0.9);
+}
+
+.overlay {
+  position: absolute;
+  width: min(100vw, calc(100vh * 9 / 16), 460px);
+  height: min(100vh, calc(100vw * 16 / 9), 818px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 96px;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  width: 148px;
+  height: 42px;
+  color: #d8d2c0;
+  border: 1px solid rgba(216, 210, 192, 0.22);
+  background: rgba(27, 27, 31, 0.72);
+  font: inherit;
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.confirm-text {
+  margin-bottom: 8px;
+  color: #d8d2c0;
+  font-size: 22px;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.confirm-actions button {
+  width: 92px;
+  font-size: 18px;
+}
