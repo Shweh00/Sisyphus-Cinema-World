@@ -70,3 +70,15 @@ curl -s -o /tmp/sisyphus-main.js -w '%{http_code} %{content_type}\n' --max-time 
 - 所有 `src/*.js` 语法检查通过。
 - `/` 返回 `200 text/html`。
 - `/src/main.js` 返回 `200 text/javascript`。
+
+## DevOps 交付信息
+
+- 应用类型：静态网页 / 浏览器 Canvas 游戏。
+- 静态根目录：`/workspace/project`。
+- 入口文件：`/workspace/project/index.html`。
+- 构建命令：无。
+- 生产运行时：任意静态 HTTP 服务；生产环境不需要 Node.js 应用进程。
+- 资源需求：仅静态托管；不需要数据库、队列、对象存储、Worker 或外部 API。
+- 环境变量 / 绑定：无。
+- 域名假设：可以部署到任意静态站点域名根路径。
+- 健康检查：`GET /` 返回 `200` 并能加载 `index.html`。
